@@ -41,6 +41,12 @@ jobs:
 
     - name: Restart docker
       run: sudo service docker restart
+      
+    - name: Configure Docker for insecure registry
+      run: |
+        echo "Adding insecure registry to Docker configuration..."
+        echo "{\"insecure-registries\": [\"$ALIYUN_REGISTRY\"]}" > /etc/docker/daemon.json
+        sudo systemctl restart docker
 
     - name: Free up disk space complete
       run: |
