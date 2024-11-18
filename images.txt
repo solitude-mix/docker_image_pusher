@@ -9,5 +9,6 @@ node:18-alpine
 docker.elastic.co/elasticsearch/elasticsearch:7.15.1
 docker.elastic.co/logstash/logstash:7.15.1
 docker.elastic.co/kibana/kibana:7.15.1
+ghcr.io/open-webui/open-webui:main
 #支持指定架构 
 --platform=linux/arm64 nginx
